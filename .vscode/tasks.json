@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with g++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Isrc/include",
+                "-Lsrc/Lib",
+                "-o",
+                "main",
+                "main.cpp",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-lgdi32",
+                "-lwinmm",
+                "-lole32",
+                "-luuid",
+                "-ldinput8",
+                "-lsetupapi",
+                "-limm32",
+                "-lversion",
+                "-lcfgmgr32",
+                "-loleaut32",
+                "-lSDL2_ttf"
+
+            ],
+            "group": "build",
+            "problemMatcher":"$gcc",
+            "detail": "Custom build task for SDL project."   
+        }
+    ]
+}
+
+// command: g++ -Isrc/include -Lsrc/Lib -o main main.cpp -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lgdi32 -lwinmm -lole32 -luuid -ldinput8 -lsetupapi -limm32 -lversion -lcfgmgr32 -loleaut32 -lSDL2_ttf
